@@ -36,7 +36,7 @@ text-align: left;
 `
 
 const MainMenu = styled.div`
-padding-top: 70px;
+padding-top: 40px;
 `
 const Menu2 = styled.div`
 display: flex;
@@ -50,6 +50,22 @@ margin-top: 20px;
  color: gray
  
 }
+`
+const MenuText2 = styled.div`
+  color: gray;
+  font-size: 16px;
+  margin-top: 21px;
+  
+`
+const MenuTextWrapper = styled.div`
+margin-top: 25px;
+`
+const UnderScore = styled.div`
+   width: 100%;
+   background-color: #232323;
+   height: 1px;
+   margin-top: 22px;
+   opacity: 0.5;
 `
 
 
@@ -79,6 +95,22 @@ const LeftSidebar = () => {
     <h3>Liked Songs</h3>
     </Menu2>
 </MainMenu>
+<UnderScore></UnderScore>
+   <MenuTextWrapper>
+   <MenuText2>Chill Mix</MenuText2>
+   <MenuText2>Insta Hits</MenuText2>
+   <MenuText2>Your Top Songs 2021</MenuText2>
+   <MenuText2>Mellow Songs</MenuText2>
+   <MenuText2>Anime Lofi & Chillhop Music</MenuText2>
+   <MenuText2>BG Afro “Select” Vibes</MenuText2>
+   <MenuText2>Afro “Select” Vibes</MenuText2>
+   <MenuText2>Happy Hits!</MenuText2>
+   <MenuText2>Deep Focus</MenuText2>
+   <MenuText2>Instrumental Study</MenuText2>
+   <MenuText2>OST Compilations</MenuText2>
+   <MenuText2>Nostalgia for old souled mill...</MenuText2>
+   <MenuText2>Mixed Feelings</MenuText2>
+   </MenuTextWrapper>
    </LeftSide>
   )
 }
