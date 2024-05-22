@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Likes from "./pages/Likes";
 import Musics from "./pages/Musics";
-import Layout from "./layout/Layout";
+import Layout from "./layouts/layout";
 import { getToken } from "./components/utils";
 function App() {
   useEffect(() => {

@@ -1,118 +1,83 @@
-import React from 'react'
-import styled from '@emotion/styled'
-import Home from '../assets/Home.png'
-import Search from '../assets/search.png'
-import Library from '../assets/Library.png'
-import Library2 from '../assets/library+.png'
-import Like from '../assets/liked.png'
-
-const LeftSide = styled.div`
-  width: 15%;
-  background-color: #000000;
-  color: #fff;
-  padding: 24px;
-  padding-left: 0;
-`
-const Menu = styled.div`
-display: flex;
-gap: 20px;
-align-items: center;
-cursor: pointer;
-transition: 0.5s ease;
-margin-top: 20px;
-&:hover{
- color: gray
- 
-}
-`
-const MenuText = styled.div`
-font-family: Circular Std;
-font-size: 18px;
-font-weight: 700;
-line-height: 22.77px;
-text-align: left;
-
-
-`
-
-const MainMenu = styled.div`
-padding-top: 40px;
-`
-const Menu2 = styled.div`
-display: flex;
-gap: 20px;
-align-items: center;
-cursor: pointer;
-margin-top: 18px;
-transition: 0.5s ease;
-margin-top: 20px;
-&:hover{
- color: gray
- 
-}
-`
-const MenuText2 = styled.div`
-  color: gray;
-  font-size: 16px;
-  margin-top: 21px;
-  
-`
-const MenuTextWrapper = styled.div`
-margin-top: 25px;
-`
-const UnderScore = styled.div`
-   width: 100%;
-   background-color: #232323;
-   height: 1px;
-   margin-top: 22px;
-   opacity: 0.5;
-`
-
-
-
-const LeftSidebar = () => {
+import home from "../assets/home.svg";
+import search from "../assets/search.svg";
+import liblary from "../assets/liblary.svg";
+import pilus from "../assets/pilus.svg";
+import like from "../assets/like.svg";
+import { Link } from "react-router-dom";
+function LeftSidebar() {
   return (
-   <LeftSide>
-    <Menu>
-        <img src={Home}/>
-         <h3>Home</h3>    
-    </Menu>
-    <Menu>
-        <img src={Search}/>
-         <h3>Search</h3>    
-    </Menu>
-    <Menu>
-        <img src={Library}/>
-         <h3>Your Library</h3>    
-    </Menu>
-<MainMenu>
-<Menu2>
-    <img src={Library2} alt="" />
-    <h3>Create Playlist</h3>
-    </Menu2>
-    <Menu2>
-    <img src={Like} alt="" />
-    <h3>Liked Songs</h3>
-    </Menu2>
-</MainMenu>
-<UnderScore></UnderScore>
-   <MenuTextWrapper>
-   <MenuText2>Chill Mix</MenuText2>
-   <MenuText2>Insta Hits</MenuText2>
-   <MenuText2>Your Top Songs 2021</MenuText2>
-   <MenuText2>Mellow Songs</MenuText2>
-   <MenuText2>Anime Lofi & Chillhop Music</MenuText2>
-   <MenuText2>BG Afro “Select” Vibes</MenuText2>
-   <MenuText2>Afro “Select” Vibes</MenuText2>
-   <MenuText2>Happy Hits!</MenuText2>
-   <MenuText2>Deep Focus</MenuText2>
-   <MenuText2>Instrumental Study</MenuText2>
-   <MenuText2>OST Compilations</MenuText2>
-   <MenuText2>Nostalgia for old souled mill...</MenuText2>
-   <MenuText2>Mixed Feelings</MenuText2>
-   </MenuTextWrapper>
-   </LeftSide>
-  )
+    <div className="w-[17%]  text-[#B2B2B2]  bg-black ">
+      <div className="pt-20 pl-10 mr-[100px]">
+        <p className="flex gap-5 mb-3 items-center transition duration-400 text-[#B2B2B2] hover:text-white">
+          <img src={home} alt="" />
+          <Link to={"/"}>Home</Link>
+        </p>
+        <p className="flex gap-5 mb-3 items-center transition duration-400 text-[#B2B2B2] hover:text-white">
+          <img src={search} alt="" />
+          <span>Search</span>
+        </p>
+        <p className="flex gap-5  mb-9 items-center transition duration-400 text-[#B2B2B2] hover:text-white ">
+          <img src={liblary} alt="" />
+          <p className="w-20 flex gap-1">
+            Your <span> </span> Library
+          </p>
+        </p>
+        <p className="flex gap-5 mb-3 items-center transition duration-400 text-[#B2B2B2] hover:text-white">
+          <img src={pilus} alt="" />
+          <p className="flex gap-1">
+            Create <span> </span> Playlist
+          </p>
+        </p>
+        <p className="flex gap-5 mb-3 items-center transition duration-400 text-[#B2B2B2] hover:text-white">
+          <img src={like} alt="" />
+          <Link to={"/likes"} className="flex gap-1">
+            Liked <span> </span> Songs
+          </Link>
+        </p>
+        <ul className="text-[16px] w-[241px] h-[515px] flex flex-col gap-3 mt-10 ">
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Chill Mix
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Insta Hits
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Your Top Songs 2021
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Mellow Songs
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Anime Lofi & Chillhop Music
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            BG Afro “Select” Vibes
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Afro “Select” Vibes
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Happy Hits!
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Deep Focus
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Instrumental Study
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            OST Compilations
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Nostalgia for old souled mill...
+          </li>
+          <li className="transition duration-400 text-[#B2B2B2] hover:text-white">
+            Mixed Feelings
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
 }
 
-export default LeftSidebar
+export default LeftSidebar;
